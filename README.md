@@ -2,15 +2,15 @@
 
 
 ## Motivation
-Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of application are not preserved under weak consistency.
+Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of applications are not preserved under weak consistency.
 
-Welcome Invariant preserving CRDTs (BoundedCounter, Multi-level lock)
+Welcome Invariant Preserving CRDTs (BoundedCounter, Multi-level lock)
 
- * Provide invariants on datatype level.
- * Replicas can trade their shares of the value but cannot touch other's share.
+ * They provide invariants on datatype level.
+ * Replicas can trade their units of the value but cannot touch other's share.
 
 Key ideas:
- * Operations execute locally without coordination most of the time.
- * Successful operations guarante to maintain the invariants.
- * When no units are available on local replica, it fetches from remote replica.
- * Proactive reservation mechanisms transfer resources in the background to guarantee low latency for majority of operations.
+ * Operations are executed locally without coordination most of the time.
+ * Successful operations guarantee the invariants to be maintained.
+ * When no units are available on the local replica, the algorithm fetches them from a remote replica.
+ * Proactive reservation mechanisms transfer resources in the background to guarantee low latency for the majority of operations.
