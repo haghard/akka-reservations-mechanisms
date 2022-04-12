@@ -2,12 +2,12 @@
 
 
 ## Motivation
-Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of applications are not preserved under weak consistency.
+Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of the applications are not preserved under weak consistency.
 
 Welcome Invariant Preserving CRDTs (BoundedCounter, Multi-level lock)
 
  * They provide invariants on datatype level.
- * Replicas can trade their units of the value but cannot touch other's share.
+ * Replicas can trade their units but cannot touch the other's units.
 
 Key ideas:
  * Operations are executed locally without coordination most of the time.
