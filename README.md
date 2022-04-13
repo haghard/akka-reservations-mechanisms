@@ -1,8 +1,10 @@
-# akka-reservations-mechanisms
+# akka-reservations
+
+Reservation is a mechanism to control the execution of `I-offenders` (the operations that may break invariants when executed concurrently) without breaking invariants.
 
 
 ## Motivation
-Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of the applications are not preserved under weak consistency.
+Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of applications are not preserved under weak consistency.
 
 Welcome Invariant Preserving CRDTs (BoundedCounter, Multi-level lock)
 
@@ -14,3 +16,4 @@ Key ideas:
  * Successful operations guarantee the invariants to be maintained.
  * When no units are available on the local replica, the algorithm fetches them from a remote replica.
  * Proactive reservation mechanisms transfer resources in the background to guarantee low latency for the majority of operations.
+
