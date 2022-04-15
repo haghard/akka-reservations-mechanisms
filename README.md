@@ -6,7 +6,7 @@ Reservation is a mechanism to control the execution of `I-offenders` (the operat
 ## Motivation
 Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of applications are not preserved under weak consistency.
 
-Welcome Invariant Preserving CRDTs (BoundedCounter, Multi-level lock)
+Welcome Invariant Preserving CRDTs (BoundedCounter, Multi-Level lock)
 
  * They provide invariants on datatype level.
  * Replicas can trade their units but cannot touch the other's units.
