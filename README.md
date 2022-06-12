@@ -1,6 +1,6 @@
 # akka-reservations
 
-Reservation is a mechanism to control the execution of `I-offenders` (those operations that may break invariants when executed concurrently) without breaking invariants.
+Reservation is a mechanism to control the execution of `I-offenders` (operations that may break invariants when executed concurrently) without breaking invariants.
 
 ## Motivation
 Sometimes convergence is not enough. Sometimes, even if we ensure convergence with CRDTs, the invariants of applications are not preserved under weak consistency.
